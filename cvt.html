@@ -257,14 +257,9 @@ footer{
 				name: `Summary`,
 				type: types.STRING,
 				data: `\
-					I was always technically inclined, and I ended up in Software Engineering. \
-					To this day I am still not sure its my kind of work, so I eventually want to move to hardware development \
-					or as one can say "closer to the metal" which was always my direction. \
-					One day I want to work on connecting humans to computers and contribute to creating the ultimate intelligence. \
-					But for now I focus on web development, cybersecurity and ERP architecture in general. \
-					I love challenges, good meal, my guitar, my music, my custom made synthesisers (now we're back to low level electronics) \
-					and of course a good company.
-					I would also like to point out that experiences in this CV are the most important ones, not all of them. \
+					My life is heading in direction of connecting humans and computers to cooperate in a best way possible and I am always looking for new ways to improve what already exists. \
+					My interest in technology and science began when I was 10, tinkering with old radios and tape recorders, then it elevated when I got interested in music, which is, nowadays, just computers and signal processing after all. So I continued that and I decided to look more into coding, My first project ever was a simple server status tool, and it was in C#. After that I was forced to go in C/C++ direction, designed FFT algorithm in Java and I was always playing around looking for fun stuff to discover. \
+					Later, mostly out of most accessible projects I switched over to JavaScript/TypeScript/ReactJs/Redux combo and worked as frontend engineer, with occasional overlap with cybersecurity features like making sure that our VPN and DNS are secure enough, since there was next to none security inside the network(customer's requirement). \
 					Also this CV was written as SPA in VanillaJS, so feel free to look at the code, I will be flattered. \
 				`
 			},
@@ -273,11 +268,12 @@ footer{
 				type: types.SKILL,
 				data: [
 					["Javascript", "TypeScript, ReactJS, npm, webpack, yarn, babel", 90],
+					["Python", "panda3d, pandas, numpy, scipy, ntlk, scipy,  Tensorflow", 80],
 					["C/C++", "lldb, valgrind, heapusage", 79],
 					["assembly","Arduino, vhdl, fpga",40],
 					[".NET","C#, Mono, VisualBasic, Entity, NHibernate",60],
-					["Python", "ntlk, scipy,  Tensorflow", 40],
 					["SQL","Oracle, MSSQL, SQLite", 40],
+					["MATLAB", "", 30],
 					["RPA","", 70],
 				]
 			},
@@ -296,34 +292,51 @@ footer{
 				name: `Experience`,
 				type: types.EXPEREINCE,
 				data: [
-					{
-						company: "FSP a.s.",
+						{
+						company: 'esc aerospace s.r.o. ',
 						time: {
-							from: "September 2018",
-							to: "current"
+							from: 'March 2021',
+							to: 'current'
 						},
-						title: "Frontend engineer",
-						tasks: "Lead integration of internal framework and \
+						title: 'Software engineer',
+						tasks: '\
+							I have developed remote testing unit for space satellites, which were to be triggered by telecommands sent from control stations on earth \
+							Furthermore I have added many inputs regarding development of BCI robotic arms, for eventual development of exoskeletons. \
+							My role in this project was to mainly create a model to process and visualise brain/nerve inputs and overall managing of APIs in this project. \
+							In addition to all this I have written documentation, translating from customer requirements to granular, testable blocks, and further developed those in internal framework extending python 3.7.3 as unit tests.\
+						',
+						outlook: '\
+							Really fun projects and company, and I can say that it was the most demanding position in a sense of critical thinking(I had to "break" a lot of stuff for testing purposes). \
+							Since this company was project-driven, we were always waiting for customer to finish their end first and some days there was nothing to do. \
+						'
+					},				{
+						company: 'FSP a.s.',
+						time: {
+							from: 'September 2018',
+							to: 'December 2020'
+						},
+						title: 'Frontend engineer',
+						tasks: 'Lead integration of internal framework and \
 							added several features and functionalities and created \
 							POC project, assisting with security of the company, \
 							cooperation of desing of backend model + api.\
 							Also cooperation in leading development of life insurance systems\
 							which are meant to be in production for few decades\
-						",
-						outlook: "\
+						',
+						outlook: '\
 							Old fashioned company, but my colleagues were friendly, a lot of compassion \
 							for beginners. Projects were repetitive though, which is not really \
 							my flavour of work and eventually I kept up getting bored by the tasks I was assgined \
-						"
+						'
 					},
 					{
-						company: "DHL IT Services",
+						company: 'DHL IT Services',
 						time: {
-							from: "September 2018",
-							to: "January 2018"
+							from: 'September 2018',
+							to: 'January 2018'
 						},
-						title: "Software Analyst\/Developer",
-						tasks: "\
+						title: 'Software Analyst\/Developer',
+						tasks: '\
 							Developed in-house projects and cooperated to analyze \
 							call center problems and delivered sketch of solution. \
 							Mainly javascript with c# to some degree. \
@@ -331,30 +344,30 @@ footer{
 							figure out data patterns for my projects. \
 							A lot of AI analysis and coopeartion with our Data Science team, \
 							as a group we delivered whole-day workshop on essentials of AI. \
-						",
-						outlook: "\
+						',
+						outlook: '\
 							Most fun and friendly company I have ever worked for, \
 							a lot of young people in the company. I was never bored \
 							and always had something interesting to do. \
 							I have learned react here with a lot of help from my colleagues \
 							and also my amazing boss who always had my back \
-						",
+						',
 					},
 					{
-						company: "Siemens s.r.o.",
+						company: 'Siemens s.r.o.',
 						time: {
-							from: "May 2017",
-							to: "September 2017"
+							from: 'May 2017',
+							to: 'September 2017'
 						},
-						title: "RPA Developer",
-						tasks: "\
+						title: 'RPA Developer',
+						tasks: '\
 							Designed automation of processes focused mainly on \
 							backoffice, leading developement of global accounts \
 							control. Worked mainly with UML-ish structures with \
 							several Visual Basic macros. Also a bit of scripting \
 							powershell and heavy usage of regex.\
-						",
-						outlook: "I gained a lot of knowledge of theoretical programming, faced my first meetings, first learnt about regex",
+						',
+						outlook: 'I gained a lot of knowledge of theoretical programming, faced my first meetings, first learnt about regex',
 					},
 				]
 			},
@@ -363,25 +376,25 @@ footer{
 				type: types.EXPEREINCE, 
 				data:[
 						{
-							company: "FEL ČVUT, Prague",
+							company: 'FEL ČVUT, Prague',
 							time: {
-								from: "September 2019",
-								to: "Current"
+								from: 'September 2019',
+								to: 'Current'
 							},
-							title: "Medical electronics and Bioinformatics",
-							tasks: "\
+							title: 'Medical electronics and Bioinformatics',
+							tasks: '\
 								 \
-							",
-							outlook: "",
+							',
+							outlook: '',
 						},
 						{
-							company: "FIT ČVUT, Prague",
+							company: 'FIT ČVUT, Prague',
 							time: {
-								from: "September 2017",
-								to: "February 2019"
+								from: 'September 2017',
+								to: 'February 2019'
 							},
-							title: "Information Technologies",
-							tasks: "\
+							title: 'Information Technologies',
+							tasks: '\
 								The weirdest mix of people came together and started to study computers. I learned how to cooperate with people more, \
 								I understood some basic math principles which are behind a lot of technology. The institution has given me complete outlook \
 								on how to analyze problems and where to look for ideas when I run out of solutions. \
@@ -389,17 +402,17 @@ footer{
 								hardware began to grow. The courses were really challenging, some even too much. \
 								My analytic skills were challenged at all times during courses, and sadly, given my family situation, \
 								I had to postpone my education, which will continue in more hardware-brain direction.\
-							",
-							outlook: "",
+							',
+							outlook: '',
 						},
 						{
-							company: "SPŠei Kratochvílova, Ostrava",
+							company: 'SPŠei Kratochvílova, Ostrava',
 							time: {
-								from: "September 2013",
-								to: "June 2017"
+								from: 'September 2013',
+								to: 'June 2017'
 							},
-							title: "Electrical engineering",
-							tasks: "\
+							title: 'Electrical engineering',
+							tasks: '\
 								I studied EE because I was always fascinated with technology, \
 								which lead me into study of automation, AD/DA converters, \
 								and huge amount of math behind all of that. \
@@ -408,20 +421,20 @@ footer{
 								and how things in world work, and eventually what to do with them. \
 								The last but not least thing is, given i was not the best student at times, \
 								I learned how to bend rules and break things so they do what I want. \
-							",
-							outlook: "",
+							',
+							outlook: '',
 						},
 				]
 			},
 			funStack: {
 				name: `Fun Stack`,
 				type: types.STRING,
-				data: "\
+				data: '\
 					I like to play guitar, create my own music, using my either programmed or hardware synthesisers. \
 					Also I love just going out and capture the moment with analog cameras, without any new age technology. \
 					I try to read a lot about human brain, about new technology, new gadgets. \
 					Also I like my car more than I should so I drive around anywhere I can. \
-					",
+					',
 			}
 		};
 		/**
