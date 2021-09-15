@@ -4,20 +4,20 @@
 	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
 <style type="text/css">
 .info{
-	width:100%;
+	width:60vw;
 	text-align: center;
 	font-size: large;
 	display: block;
 }
 .info-item {
 	text-align: center;
-	font-size: 1.3vw;
+	font-size: 1vw;
+	font-family: monospace;
 	display: block;
-	padding: 0 0.5em;
-	margin-left: 1em;
+	padding: 0 2vw;
 }
 .container{ 
-	background-color: #ECECEC;
+	background-color: rgba(235, 235, 235, 0.90);
 	width:64vw;
 	position: absolute;
 	left:32vw;
@@ -88,7 +88,9 @@
 	}
 	.info-item {
 		display: inline;
-		border-right: 2px solid white;
+		border-right: 2px solid  rgba(10,10,10, 0.7);
+		border-left: 2px solid rgba(10,10,10, 0.7);
+
 	}
 	.initial{
 		object-fit: contain;
@@ -117,13 +119,14 @@
 .area {
 	padding-top:1vw;
 	float: right;
-	font-family: "Arvo", serif; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 1em;
 }
 
 
 .name{
 	font-size:3vw;
+	font-family:'Times New Roman', serif;
 	text-align: center;
 }
 
@@ -185,7 +188,7 @@
 	word-wrap: break-word;
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 1em;
-	width:32vw; 
+	width:100vw; 
 	z-index: -10;
 	color:rgba(19,19,19,0.2);
 	text-align: justify;
@@ -196,9 +199,19 @@
 
 }
 
-#root {
-	width: 790px; height: 1450px; margin: 0px;
+#wrap {
+	text-align: center;
+	padding-bottom: 1vw;
 }
+
+#github {
+	text-align: center;	
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+	padding-left: 1vw;
+	margin-top:3vw;
+}
+
 body{
 	margin: auto;
 	color: black;
@@ -242,16 +255,18 @@ footer{
 				],
 				["div",{className:"container", id:"container"},
 					[
-						[
-							"div", {className:"infobox", id: "infobox"},[
+						["div", {className:"infobox", id: "infobox"},[
+							["div", {id:"wrap"},[
 								["div", {className:"name", id:"name", innerHTML: "Vojtěch Stoklasa"}],
-								["div",{className:"info", id: "info"},
-									[
-										["div", {className:"info-item", innerHTML:"stoklasavojtech@live.com"}],
-										["div", {className:"info-item", innerHTML:"+420 608 40 33 44"}],
-										["div", {className:"info-item", innerHTML:"Praha / Ostrava"}],
-									]
+								["a", {id: "github", href:"http://www.github.com/cxsmxx/", innerHTML: "@github"},]
+							]],
+							["div",{className:"info", id: "info"},
+								[
+									["div", {className:"info-item", innerHTML:"stoklasavojtech@live.com"}],
+									["div", {className:"info-item", innerHTML:"+420 608 40 33 44"}],
+									["div", {className:"info-item", innerHTML:"Praha / Ostrava"}],
 								]
+							],
 							]
 						]
 					]
@@ -285,23 +300,25 @@ footer{
 					["Javascript", "TypeScript, ReactJS, npm, webpack, yarn, babel", 90],
 					["Python", "panda3d, pandas, numpy, scipy, ntlk, scipy,  Tensorflow", 80],
 					["C/C++", "lldb, valgrind, heapusage", 79],
-					["assembly","Arduino, vhdl, fpga",40],
 					[".NET","C#, Mono, VisualBasic, Entity, NHibernate",60],
 					["SQL","Oracle, MSSQL, SQLite", 40],
+					["assembly","Arduino, vhdl, fpga",40],
 					["MATLAB", "", 30],
 					["RPA","", 70],
 				]
 			},
 			techStack: {
-				name: `Technical Stack`,
+				name: `Favourite tools`,
 				type: types.STRINGARRAY,
 				data: [
-					"vim",
-					"MacOS",
-					"kali",
-					"python",
+					"VIM",
+					"MacOS, Kali, Windows",
+					"Python",
 					"TypeScript",
-					"C++",
+					"C/C++, cmake, mason",
+					"VSCode + ton of plugins",
+					"git, svn",
+					"Docker, AWS,"
 				],
 			},
 			experience: {
@@ -331,7 +348,7 @@ footer{
 							from: 'September 2018',
 							to: 'December 2020'
 						},
-						title: 'fullstack engineer',
+						title: 'Fullstack engineer',
 						tasks: 'Lead integration of internal framework and \
 							added several features and functionalities and created \
 							POC project, assisting with security of the company, \
@@ -342,7 +359,7 @@ footer{
 						outlook: '\
 							Old fashioned company, but my colleagues were friendly, a lot of compassion \
 							for beginners. Projects were repetitive though, which is not really \
-							my flavour of work and eventually I kept up getting bored by the tasks I was assgined. \
+							my flavour of work and eventually I kept up getting bored by the tasks I was assigned. \
 						'
 					},
 					{
@@ -365,8 +382,8 @@ footer{
 							Most fun and friendly company I have ever worked for, \
 							a lot of young people in the company. I was never bored \
 							and always had something interesting to do. \
-							I have learned react here with a lot of help from my colleagues \
-							and also my amazing boss who always had my back \
+							I have learned how to use ReactJS here with a lot of help from my colleagues \
+							and also my amazing manager who always had my back. \
 						',
 					},
 					{
@@ -378,7 +395,7 @@ footer{
 						title: 'RPA Developer',
 						tasks: '\
 							Designed automation of processes focused mainly on \
-							backoffice, leading developement of global accounts \
+							backoffice, leading development of global accounts \
 							control. Worked mainly with UML-ish structures with \
 							several Visual Basic macros. Also a bit of scripting \
 							powershell and heavy usage of regex.\
@@ -455,7 +472,6 @@ footer{
 				});
 		}
 		function add (elementid, data, index, interval) { 
-			console.log(elementid, data, index, interval);
 			var id = document.getElementById(elementid);
 			if(!id.hasAttribute("rendering"))
 					id.setAttribute("rendering", "none");
@@ -677,7 +693,7 @@ footer{
 			.then((res) => res.text()
 		).then((data) => add("exp", data , rollingTextsCount-1, 5))
 		*/
-	add("exp",renderedMessage , rollingTextsCount-1, 18);
+	add("exp",renderedMessage , rollingTextsCount-1, 0.1);
 	</script>
 
 </body>
