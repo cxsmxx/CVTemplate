@@ -617,18 +617,25 @@ footer{
 								{
 									id: item[0].toLowerCase()+'-x',
 									className: "skill",
-									onclick: () => add(item[0].toLowerCase()+ '-x', DATA.skills.data[i][1], i, 50),
-									innerHTML:item[0]+": ",
+									// onclick: () => add(item[0].toLowerCase()+ '-x', DATA.skills.data[i][1], i, 50),
+									innerHTML:item[0]+": "+item[1],
 								},
 								[
-									[	"div",
+									["div",
 										{
 											className: "skill-level",
 											style: "max-width:" + item[2] +"%; width:0",
 										}
+									],
+									["div", 
+										{
+											className: item[0].toLowerCase()+'-xs',
+											innerHTML: item[1]
+										}
 									]
 								]
-							])
+							]
+							)
 						}))
 					);
 					var elem = document.getElementById("progress");
@@ -665,7 +672,7 @@ footer{
 		var subskillsIntervalIdsDec = [rollingTextsCount];
 
 		for(var j = 0; j <= subskills.length; j ++) {
-			subskillsTextIndex[j] = 0;// skills[j].innerHTML.length;
+			subskillsTextIndex[j] = 0;// skills[j].innerHTML;
 		}
 		render(DATA.summary);
 		render(DATA.experience);
