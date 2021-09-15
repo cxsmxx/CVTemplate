@@ -9,6 +9,7 @@
 	font-size: large;
 	display: block;
 }
+
 .info-item {
 	text-align: center;
 	font-size: 1vw;
@@ -16,6 +17,7 @@
 	display: block;
 	padding: 0 2vw;
 }
+
 .container{ 
 	background-color: rgba(235, 235, 235, 0.90);
 	width:64vw;
@@ -26,9 +28,7 @@
 	border-left: 4vw solid rgba(255, 235, 0, 0.7) ;
 	border-top-left-radius: 2vw;
 }
-#body {
-	margin-top: 3vw;
-}
+
 .initial{ 
 	object-fit: cover;
 	font-size-adjust: initial;
@@ -75,22 +75,25 @@
 	border-top: 3px solid white;
 	padding-top: 0.5vw;
 }
+
 .infobox{
 	min-height: 17vw;
 	margin-top: 9vw;
 	padding-bottom: -10vw;
 	text-overflow: clip;
 }
+
 @media screen and (min-width: 750px){
 	.item{
 		font-size: 0.6em;
 	}
+
 	.info-item {
 		display: inline;
 		border-right: 2px solid  rgba(10,10,10, 0.7);
 		border-left: 2px solid rgba(10,10,10, 0.7);
-
 	}
+
 	.initial{
 		object-fit: contain;
 		width:25vw;
@@ -99,16 +102,15 @@
 		padding-right: 1vw;
 		font-size: 12vw;
 		border-radius: 0 2vw 2vw 0 ;
-	
 	}
+	
 	.item-label {
 		width: 30vw;
 	}
+
 	.infobox {
 		padding-bottom: -15vw;
 	}
-	
-
 }
 
 .left-col{
@@ -124,7 +126,6 @@
 	font-size: 1em;
 }
 
-
 .name{
 	font-size:3vw;
 	font-family:'Times New Roman', serif;
@@ -137,11 +138,13 @@
 	font-weight: 100;
 	margin-bottom: 0.5em;
 }
+
 .skill-subskill {
 	display:none;
 	padding-left: 0.25em;
 	font-weight: 100;
 }
+
 .skill-level {
 	border-bottom:0.3em solid #ffee00;
 	z-index: 5;
@@ -151,6 +154,7 @@
 .experience {
 	padding-bottom: 2vw;
 }
+
 .experience-title {
 	font-family: Didot, serif;
 	color: black;
@@ -158,20 +162,22 @@
 	font-synthesis: weight;
 	font-style: italic;
 }
+
 .experience-company {
 	font-family: 'Times New Roman', Times, serif;
 	color: black;
 	font-size: 2vw;
 }
+
 .experience-time {
 	font-family: Didot, serif;
 	font-style: oblique;
 	text-align: right;
 }
+
 .experience-description {
 	padding-top: 1vw;
 	font-size: 1em;
-
 }
 .experience-outlook {
 	font-style: italic;
@@ -180,11 +186,13 @@
 	padding-top: 1vw;
 	font-size: 0.8em;
 }
+
 .summary {
 	font-style: italic;
 	font-weight: 100;
 	font-size: 1em;
 }
+
 #exp {
 	word-wrap: break-word;
 	font-family: 'Courier New', Courier, monospace;
@@ -193,11 +201,9 @@
 	z-index: -10;
 	color:rgba(19,19,19,0.2);
 	text-align: justify;
-
 	background-color: white;
 	height: 100%;
 	position:fixed;
-
 }
 
 #wrap {
@@ -216,6 +222,7 @@
 body{
 	margin: auto;
 	color: black;
+	margin-top: 3vw;
 }
 
 footer{
@@ -459,10 +466,11 @@ footer{
 					',
 			}
 		};
+
 		/**
-			* Creates HTML element of given type, can have nested children
-			* First element MUST have parent element, others will nest to each other
-			*/
+		 * Creates HTML element of given type, can have nested children
+		 * First element MUST have parent element, others will nest to each other
+		 */
 		function createHtmlChildElement (element, props, parent, children) {
 			var x = document.createElement(element);
 			Object.keys(props).forEach(key => x[key] = props[key]);
@@ -472,6 +480,7 @@ footer{
 						createHtmlChildElement(c[0],c[1], x.id, c[2] ? c[2] : []);	
 				});
 		}
+
 		function add (elementid, data, index, interval) { 
 			var id = document.getElementById(elementid);
 			if(!id.hasAttribute("rendering"))
@@ -484,6 +493,7 @@ footer{
 			else if(rendering === "inc" || rendering === "done"){
 				runDec();
 			};
+			
 			function runInc()  {
 				() => clearInterval(subskillsIntervalIdsDec[index]);
 				subskillsIntervalIdsInc[index] = setInterval( () => {
@@ -499,6 +509,7 @@ footer{
 					}
 				},interval);
 			};
+			
 			function runDec() {
 				() => clearInterval(subskillsIntervalIdsInc[index]);
 				subskillsIntervalIdsDec[index] = setInterval( () => {
@@ -514,6 +525,7 @@ footer{
 				},interval);
 			}
 		};
+
 		function render(x) {
 			const x_id = x.name.replace(' ', '-').toLowerCase();
 			createHtmlChildElement(
@@ -540,7 +552,6 @@ footer{
 					],
 				],
 			);
-		
 	
 		switch(x.type) {
 				case types.STRING:
@@ -691,11 +702,6 @@ footer{
 		var renderedMessage = ""
 		for(var sha = 0; sha < va*2; sha++)
 			renderedMessage += encodedMessage;
-			/*
-		fetch("./cv2019.html", )
-			.then((res) => res.text()
-		).then((data) => add("exp", data , rollingTextsCount-1, 5))
-		*/
 	add("exp",renderedMessage , rollingTextsCount-1, 0.1);
 	</script>
 
