@@ -267,7 +267,7 @@ footer{
 						["div", {className:"infobox", id: "infobox"},[
 							["div", {id:"wrap"},[
 								["div", {className:"name", id:"name", innerHTML: "Vojtěch Stoklasa"}],
-								["a", {id: "github", href:"http://www.github.com/cxsmxx/fft", innerHTML: "@github"},]
+								["a", {id: "github", href:"http://www.github.com/cxsmxx", innerHTML: "@github"},]
 							]],
 							["div",{className:"info", id: "info"},
 								[
@@ -296,10 +296,14 @@ footer{
 				name: `Summary`,
 				type: types.STRING,
 				data: `\
-					My life is heading in direction of connecting humans and computers to cooperate in a best way possible and I am always looking for new ways to improve what already exists. \
-					My interest in technology and science began when I was 10, tinkering with old radios and tape recorders, then it elevated when I got interested in music, which is, nowadays, just computers and signal processing after all. So I continued that and I decided to look more into coding, My first project ever was a simple server status tool, and it was in C#. After that I was forced to go in C/C++ direction, designed FFT algorithm in Java and I was always playing around looking for fun stuff to discover. \
-					Later, mostly out of most accessible projects I switched over to JavaScript/TypeScript/ReactJs/Redux combo and worked as frontend engineer, with occasional overlap with cybersecurity features like making sure that our VPN and DNS are secure enough, since there was next to none security inside the network(customer's requirement). \
-					Also this CV was written as SPA in VanillaJS, so feel free to look at the code, I will be flattered. \
+					I am fullstack developer with overlaps to many areas, including automation, cybersecurity, embedded systems and anything that catches my interest. \
+	       				This comes from fascination with electrical engineering since I was 10 and it hasn't left so far. \
+	       				I am experienced python and JS developer, since it is most comfortable to use this combination for rapid and agile development. \
+	       				Learning that good DevOps is a critical part of any teamwork was one of the most imporant lessons I got as engineer. \
+	       				Also it is important to me to have good relationship with team and colleagues even from other department close to me, either project wise or near my office. \
+	       				I have also peaked into the world of cybersecurity and after a year i still have to call myself a beginner, since I am just learning how many things I don't know, therefore being humble is in place regarding this matter. \
+	       				For whatever reason I became heavy VIM user, probably because of it's availibility on pretty much every *nix based computer. \
+					This CV was written as SPA in VanillaJS, it will be my pleasure if you check it out! \
 				`
 			},
 			skills: {
@@ -307,13 +311,11 @@ footer{
 				type: types.SKILL,
 				data: [
 					["Javascript", "TypeScript, ReactJS, npm, webpack, yarn, babel", 90],
-					["Python", "panda3d, pandas, numpy, scipy, ntlk, scipy,  Tensorflow", 80],
-					["C/C++", "lldb, valgrind, heapusage", 79],
-					[".NET","C#, Mono, VisualBasic, Entity, NHibernate",60],
-					["SQL","Oracle, MSSQL, SQLite", 40],
-					["assembly","Arduino, vhdl, fpga",40],
-					["MATLAB", "", 30],
-					["RPA","", 70],
+					["Python", "Flask, PyTest, panda3d, pandas, numpy, scipy, ntlk, scipy,  Tensorflow", 90],
+					["C/C++", "", 79], ["C#",".NET, Mono, VisualBasic, Entity, NHibernate",60],
+					["SQL","Oracle, MsSQL, SQLite", 40],
+					["assembly","FreeRTOS, vhdl, fpga",40],
+					["RPA","UiPath, BluePrism", 70],
 				]
 			},
 			techStack: {
@@ -321,12 +323,9 @@ footer{
 				type: types.STRINGARRAY,
 				data: [
 					"VIM",
-					"MacOS, Kali, Windows",
-					"Python",
-					"TypeScript",
-					"C/C++, cmake, mason",
-					"VSCode + ton of plugins",
-					"git, svn",
+					"MacOS, Debian-based systems",
+					"VSCode",
+					"git",
 					"Docker, AWS,"
 				],
 			},
@@ -341,35 +340,37 @@ footer{
 							to: 'current'
 						},
 						title: 'Software engineer',
-						tasks: '\
-							I have developed remote testing unit for space satellites, which were to be triggered by telecommands sent from control stations on earth \
+						tasks: `\
+							I have developed internal subroutines testing system integrity for space satellites to assure correct behaviour. \
 							Furthermore I have added many inputs regarding development of BCI robotic arms, for eventual development of exoskeletons. \
 							My role in this project was to mainly create a model to process and visualise brain/nerve inputs and overall managing of APIs in this project. \
-							In addition to all this I have written documentation, translating from customer requirements to granular, testable blocks, and further developed those in internal framework extending python 3.7.3 as unit tests.\
-						',
+							I was put in charge of testing automation and I was responsible for managing requirements and delegating tasks to my teammates. 
+						`,
 						outlook: '\
-							Really fun projects and company, and I can say that it was the most demanding position in a sense of critical thinking(I had to "break" a lot of stuff for testing purposes). \
-							Since this company was project-driven, we were always waiting for customer to finish their end first and some days there was nothing to do. \
-						'
-					},				{
+							Demanding and interesting projects and company, and I can say that it was the most demanding position in a sense of critical thinking(I had to "break" a lot of stuff for testing purposes). \
+							I had trouble getting used to outdated tools required to be used for work(svn, skype, DOORS and basically nonexistent bugtracking system) \
+						',
+					},
+					{
 						company: 'FSP a.s.',
 						time: {
 							from: 'September 2018',
 							to: 'December 2020'
 						},
 						title: 'Fullstack engineer',
-						tasks: 'Lead integration of internal framework and \
+						tasks: `\
+							Lead integration of internal framework and \
 							added several features and functionalities and created \
 							POC project, assisting with security of the company, \
 							cooperation of desing of backend model + api.\
 							Also cooperation in leading development of life insurance systems\
 							which are meant to be in production for few decades\
-						',
-						outlook: '\
+						`,
+						outlook: `\
 							Old fashioned company, but my colleagues were friendly, a lot of compassion \
 							for beginners. Projects were repetitive though, which is not really \
 							my flavour of work and eventually I kept up getting bored by the tasks I was assigned. \
-						'
+						`
 					},
 					{
 						company: 'DHL IT Services',
@@ -378,7 +379,7 @@ footer{
 							to: 'January 2018'
 						},
 						title: 'Software Analyst\/Developer',
-						tasks: '\
+						tasks: `\
 							Developed in-house projects and cooperated to analyze \
 							call center problems and delivered sketch of solution. \
 							Mainly javascript with c# to some degree. \
@@ -386,30 +387,30 @@ footer{
 							figure out data patterns for my projects. \
 							A lot of AI analysis and coopeartion with our Data Science team, \
 							as a group we delivered whole-day workshop on essentials of AI. \
-						',
-						outlook: '\
+						`,
+						outlook: `\
 							Most fun and friendly company I have ever worked for, \
 							a lot of young people in the company. I was never bored \
 							and always had something interesting to do. \
 							I have learned how to use ReactJS here with a lot of help from my colleagues \
 							and also my amazing manager who always had my back. \
-						',
+						`,
 					},
 					{
 						company: 'Siemens s.r.o.',
 						time: {
-							from: 'May 2017',
-							to: 'September 2017'
+							from: 'Jan 2017',
+							to: 'November 2017'
 						},
-						title: 'RPA Developer',
-						tasks: '\
+						title: 'RPA Automation Developer',
+						tasks: `\
 							Designed automation of processes focused mainly on \
 							backoffice, leading development of global accounts \
-							control. Worked mainly with UML-ish structures with \
-							several Visual Basic macros. Also a bit of scripting \
+							control. Worked mainly with UML structures with \
+							several Visual Basic macros. Also a lot of scripting \
 							powershell and heavy usage of regex.\
-						',
-						outlook: 'First proper job in IT I ever had, I gained a lot of knowledge of theoretical programming, faced my first meetings, first learnt about regex',
+						`,
+						outlook: 'A different perspective on development, with more solution-based approach. There were many "hacks" not adhering to best practices, but solved problems efficiently',
 					},
 				]
 			},
@@ -457,14 +458,13 @@ footer{
 				]
 			},
 			funStack: {
-				name: `Fun Stack`,
+				name: `in free time`,
 				type: types.STRING,
-				data: '\
-					I like to play guitar, create my own music, using my either programmed or hardware synthesisers. \
+				data: `\
+					I play many string instruments, create my own music, sometimes using my own synthesisers. \
 					Also I love just going out and capture the moment with analog cameras, without any new age technology. \
-					I try to read a lot about human brain, about new technology, new gadgets. \
-					Also I like my car more than I should so I drive around anywhere I can. \
-					',
+					Reading about either medicine or cybersecurity is basically everying I do in my free time. \
+				`,
 			}
 		};
 
